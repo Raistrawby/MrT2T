@@ -52,7 +52,7 @@ At the end you should have a cleaned genome.
 ```cut -f1 MITO_CONTIGS.txt | sort | uniq -c | sort -nr | head```
 
 ```sbatch minimap.sh```
-```sbatch pileup.sh```
+```pileup.sh in=mapping.sam out=contig_coverage.txt```
 Use BBMap's pileup.sh tool to calculate read coverage and GC content per contig.
 
 contig >=5X with the awk 
